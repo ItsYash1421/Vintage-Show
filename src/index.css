@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom cursor */
+.cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: transform 0.1s ease-out;
+}
+
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 4px;
+}
+
+/* Global body styles */
+body {
+  @apply bg-black text-white font-sans;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-yellow-500 text-black px-6 py-2 rounded-lg shadow-lg transition-all duration-300 hover:bg-yellow-600;
+}
+
+.btn-secondary {
+  @apply border border-yellow-500 text-yellow-500 px-6 py-2 rounded-lg transition-all duration-300 hover:bg-yellow-500 hover:text-black;
+}

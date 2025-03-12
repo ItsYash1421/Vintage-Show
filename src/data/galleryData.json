@@ -1,0 +1,45 @@
+[
+    {
+      "src": "/images/car1.jpg",
+      "title": "Ford Mustang 1967",
+      "desc": "A classic American muscle car with a powerful V8 engine.",
+      "category": "Classic"
+    },
+    {
+      "src": "/images/car2.jpg",
+      "title": "Chevrolet Bel Air 1957",
+      "desc": "An iconic car with stylish chrome detailing and a smooth ride.",
+      "category": "Classic"
+    },
+    {
+      "src": "/images/car3.jpg",
+      "title": "Jaguar E-Type 1961",
+      "desc": "Known for its sleek design and incredible performance.",
+      "category": "Sports"
+    },
+    {
+      "src": "/images/car4.jpg",
+      "title": "Porsche 356 Speedster",
+      "desc": "A lightweight, nimble sports car loved by collectors.",
+      "category": "Sports"
+    },
+    {
+      "src": "/images/car5.jpg",
+      "title": "Mercedes-Benz 300SL",
+      "desc": "Famous for its gullwing doors and luxurious engineering.",
+      "category": "Luxury"
+    },
+    {
+      "src": "/images/car6.jpg",
+      "title": "Ferrari 250 GTO",
+      "desc": "A rare and highly valuable Ferrari known for its racing history.",
+      "category": "Sports"
+    },
+    {
+      "src": "/images/car7.jpg",
+      "title": "Rolls-Royce Silver Cloud",
+      "desc": "A symbol of luxury and elegance from the 1950s.",
+      "category": "Luxury"
+    }
+  ]
+  

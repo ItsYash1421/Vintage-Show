@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
+  }
+  
+  
+  
+
+body {
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #ff0080);
+    background-size: 400% 400%;
+    animation: gradientBG 8s ease infinite;
+    color: #eee;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  
+
+/* ============= Animated Gradient Background ============= */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ============= Custom Cursor ============= */
+.custom-cursor {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 100, 0, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: transform 0.15s ease-out;
+  z-index: 9999;
+}
+
+/* ============= Hero Section ============= */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-size: 6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ffae00, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards, glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0px 0px 10px rgba(255, 100, 0, 0.4); }
+  100% { text-shadow: 0px 0px 25px rgba(255, 100, 0, 0.9); }
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  max-width: 800px;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* ============= Explore Button ============= */
+.explore-button {
+  margin-top: 30px;
+  padding: 15px 45px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+  background: linear-gradient(45deg, #ffb400, #ff3e00);
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.explore-button::after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 80%);
+  top: -50%;
+  left: -50%;
+  transition: transform 0.4s;
+}
+
+.explore-button:hover::after {
+  transform: rotate(360deg);
+}
+
+.explore-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 20px rgba(255, 136, 0, 0.6);
+}
+
+/* ============= 3D Model Section ============= */
+.car-model-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  perspective: 1000px;
+}
+
+.car-model {
+  transform: rotateY(10deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.car-model:hover {
+  transform: rotateY(0deg);
+}
+
+.about-section {
+    padding: 80px 60px;
+    background: linear-gradient(135deg, #1e1e1e, #292929);
+    color: #f5f5f5;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 10px 40px rgba(255, 100, 0, 0.3);
+  }
+  
+  /* Header Section */
+  .about-header {
+    margin-bottom: 40px;
+  }
+  
+  .about-title {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #ffa726;
+  }
+  
+  .about-subtitle {
+    font-size: 1.3rem;
+    font-style: italic;
+    opacity: 0.9;
+  }
+  
+  /* About Cards */
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .about-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .about-card:hover {
+    transform: scale(1.1);
+    z-index: 5;
+    box-shadow: 0px 10px 30px rgba(255, 165, 0, 0.5);
+  }
+  
+  /* Blur effect on other cards when one is hovered */
+  .about-content:hover .about-card {
+    filter: blur(4px);
+    opacity: 0.7;
+    transform: scale(0.95);
+  }
+  
+  .about-content:hover .about-card:hover {
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+/* ============= Keyframe Animations ============= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
